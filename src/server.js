@@ -1,8 +1,8 @@
 import express, { Application } from 'express';
 import cors from 'cors'
 
-import userRoutes from '../routes/user';
-import userEvents from '../routes/event';
+// import userRoutes from '../routes/user';
+// import userEvents from '../routes/event';
 
 import db from '../db/connection';
 
