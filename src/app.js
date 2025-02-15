@@ -4,6 +4,12 @@ import { PORT } from './config.js'
 
 import db from '../db/connection.js'
 
+import Server from './server.js'
+
+const server = new Server();
+
+server.listen();
+
 const app = express()
 
 app.get('/', async (req, res) => {
