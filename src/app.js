@@ -13,17 +13,17 @@ server.listen();
 const app = express()
 
 app.get('/', async (req, res) => {
-  const [rows] = await pool.query('SELECT * FROM users')
+  const [rows] = await db.query('SELECT * FROM users')
   res.json(rows)
 })
 
 app.get('/ping', async (req, res) => {
-  const [result] = await pool.query(`SELECT "hello world" as RESULT`);
+  const [result] = await db.query(`SELECT "hello world" as RESULT`);
   res.json(result[0])
 })
 
 app.get('/create', async (req, res) => {
-  const result = await pool.query('INSERT INTO users(name) VALUES ("John")')
+  const result = await db.query('INSERT INTO users(name) VALUES ("John")')
   res.json(result)
 })
 
