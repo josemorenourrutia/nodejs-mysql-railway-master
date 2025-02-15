@@ -21,5 +21,5 @@ app.get('/create', async (req, res) => {
   res.json(result)
 })
 
-app.listen(PORT)
-console.log('Server on port', PORT)
+app.listen(db.PORT)
+console.log('Server on port', db.PORT)
