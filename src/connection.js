@@ -22,4 +22,6 @@ const db = new Sequelize(
 //   // logging: false
 // })
 
+console.log(db)
+
 export default db;
